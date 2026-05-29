@@ -1,0 +1,1052 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>VL INVESTMENT AUM 1조원 돌파 기념 — TROPHYLAB</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css">
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --primary:    #472682;
+  --primary-d:  #341a66;
+  --page-bg:    #f0f0ef;
+  --surface:    #e8e8e7;
+  --surface2:   #dddcdb;
+  --white:      #ffffff;
+  --ink:        #111111;
+  --ink2:       #3a3a3a;
+  --ink3:       #6a6a6a;
+  --ink4:       #aaaaaa;
+  --border:     rgba(0,0,0,0.1);
+  --border2:    rgba(0,0,0,0.06);
+  --sans: 'Pretendard', -apple-system, sans-serif;
+}
+
+html { scroll-behavior: smooth; }
+body {
+  background: var(--page-bg);
+  color: var(--ink);
+  font-family: var(--sans);
+  font-weight: 300;
+  line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
+  letter-spacing: -0.01em;
+}
+img { display: block; max-width: 100%; }
+
+/* ── HEADER ── */
+.site-header {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  z-index: 200;
+  background: rgba(240,240,239,0.82);
+  backdrop-filter: blur(20px) saturate(180%);
+  -webkit-backdrop-filter: blur(20px) saturate(180%);
+  border-bottom: 1px solid var(--border);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 48px;
+  height: 52px;
+}
+.site-logo {
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  color: var(--ink);
+  text-decoration: none;
+}
+.site-nav { display: flex; gap: 32px; list-style: none; align-items: center; }
+.site-nav a {
+  font-size: 11px;
+  font-weight: 400;
+  letter-spacing: 0.04em;
+  color: var(--ink3);
+  text-decoration: none;
+  transition: color 0.15s;
+}
+.site-nav a:hover { color: var(--ink); }
+.nav-cta {
+  background: var(--ink) !important;
+  color: var(--white) !important;
+  padding: 7px 18px !important;
+  font-weight: 600 !important;
+  letter-spacing: 0.06em;
+  font-size: 11px !important;
+  transition: background 0.15s !important;
+}
+.nav-cta:hover { background: var(--primary) !important; color: var(--white) !important; }
+
+/* ════════════════════════
+   HERO — 풀스크린, 밝은 배경
+   ════════════════════════ */
+.hero {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  min-height: 680px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+}
+.hero-bg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 40%;
+}
+/* 밝은 배경 이미지이므로 하단에만 얕은 오버레이 */
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(240,240,239,0.10) 0%,
+    rgba(240,240,239,0.00) 40%,
+    rgba(240,240,239,0.55) 80%,
+    rgba(240,240,239,0.88) 100%
+  );
+  z-index: 1;
+}
+.hero-eyebrow {
+  position: absolute;
+  top: 80px; left: 0; right: 0;
+  text-align: center;
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.18em;
+  color: var(--ink3);
+  text-transform: uppercase;
+  z-index: 2;
+}
+.hero-content {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  padding: 0 0 72px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 0;
+}
+.hero-title {
+  font-size: clamp(48px, 7vw, 88px);
+  font-weight: 700;
+  line-height: 1.0;
+  letter-spacing: -0.04em;
+  color: var(--ink);
+  margin-bottom: 10px;
+}
+.hero-sub {
+  font-size: clamp(18px, 2.5vw, 28px);
+  font-weight: 300;
+  letter-spacing: -0.01em;
+  color: var(--ink3);
+  margin-bottom: 36px;
+}
+.hero-btns { display: flex; gap: 12px; align-items: center; }
+.btn-fill {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: var(--ink);
+  color: var(--white);
+  font-family: var(--sans);
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  padding: 13px 28px;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background 0.15s;
+}
+.btn-fill:hover { background: var(--primary); }
+.btn-ghost {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: transparent;
+  color: var(--ink2);
+  font-family: var(--sans);
+  font-size: 13px;
+  font-weight: 400;
+  letter-spacing: 0.02em;
+  padding: 12px 24px;
+  text-decoration: none;
+  border: 1px solid rgba(0,0,0,0.22);
+  border-radius: 5px;
+  transition: border-color 0.15s, color 0.15s;
+}
+.btn-ghost:hover { border-color: var(--ink); color: var(--ink); }
+.hero-scroll {
+  position: absolute;
+  bottom: 24px; left: 50%;
+  transform: translateX(-50%);
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  opacity: 0.3;
+  animation: bounce 2s ease-in-out infinite;
+}
+@keyframes bounce {
+  0%,100% { transform: translateX(-50%) translateY(0); }
+  50%      { transform: translateX(-50%) translateY(5px); }
+}
+.hero-scroll-line { width: 1px; height: 28px; background: var(--ink); }
+.hero-scroll-label { font-size: 8px; letter-spacing: 0.16em; color: var(--ink); text-transform: uppercase; }
+
+/* ════════════════════════
+   INTRO + META — 한 묶음
+   ════════════════════════ */
+.intro-strip {
+  background: var(--page-bg);
+  border-top: none;
+  padding: 80px 0 0;
+  text-align: center;
+}
+.intro-headline {
+  font-size: clamp(20px, 2.8vw, 38px);
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  line-height: 1.15;
+  color: var(--ink);
+  margin-bottom: 20px;
+  white-space: nowrap;
+  overflow: visible;
+}
+.intro-body {
+  font-size: 15px;
+  font-weight: 300;
+  color: var(--ink3);
+  line-height: 1.45;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* ════════════════════════
+   META STRIP
+   ════════════════════════ */
+.meta-strip {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+  background: var(--page-bg);
+  margin-top: 56px;
+  margin-left: 0;
+  margin-right: 0;
+}
+.ms-cell {
+  padding: 24px 36px;
+  border-right: 1px solid var(--border);
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.ms-cell:last-child { border-right: none; }
+.ms-key {
+  font-size: 9px;
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  color: var(--ink4);
+  text-transform: uppercase;
+}
+.ms-val {
+  font-size: 14px;
+  font-weight: 400;
+  color: var(--ink2);
+  letter-spacing: -0.01em;
+}
+
+/* ════════════════════════
+   TROPHY SHOWCASE — 정면 클린샷 + 커스터마이징
+   ════════════════════════ */
+.trophy-showcase {
+  background: #1a1a1a;
+  border-top: 1px solid var(--border);
+  padding: 72px 48px 0;
+}
+.trophy-img-wrap {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  margin-bottom: 0;
+}
+.trophy-img-wrap img {
+  width: 78%;
+  max-width: 920px;
+  display: block;
+  mix-blend-mode: screen;
+}
+.trophy-custom-bar {
+  display: flex;
+  justify-content: center;
+  gap: 48px;
+  padding: 28px 0 48px;
+  border-top: 1px solid rgba(255,255,255,0.1);
+  margin-top: 40px;
+  flex-wrap: wrap;
+}
+.tcb-item {
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+}
+.tcb-dot {
+  width: 7px;
+  height: 7px;
+  background: rgba(255,255,255,0.6);
+  border-radius: 1px;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+.tcb-keyword {
+  font-size: 13px;
+  font-weight: 700;
+  color: rgba(255,255,255,0.85);
+  white-space: nowrap;
+}
+.tcb-desc {
+  font-size: 13px;
+  font-weight: 300;
+  color: rgba(255,255,255,0.45);
+  line-height: 1.5;
+}
+.trophy-spec-bar {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  border-top: 1px solid var(--border);
+  margin-top: 0;
+}
+.tsb-cell {
+  padding: 32px 36px;
+  border-right: 1px solid var(--border);
+}
+.tsb-cell:last-child { border-right: none; }
+.tsb-keyword {
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--ink);
+  letter-spacing: -0.01em;
+  margin-bottom: 10px;
+}
+.tsb-desc {
+  font-size: 13px;
+  font-weight: 300;
+  color: var(--ink3);
+  line-height: 1.7;
+}
+
+/* ════════════════════════
+   PRODUCT VIEW — 정면 / 후면
+   ════════════════════════ */
+.product-view {
+  background: var(--page-bg);
+  border-top: none;
+  padding: 72px 250px 0;
+}
+.product-view-title {
+  font-size: clamp(26px, 3vw, 36px);
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  color: var(--ink);
+  margin-bottom: 48px;
+}
+.pv-panel {
+  display: block;
+  margin-bottom: 64px;
+}
+.pv-img-wrap {
+  background: var(--surface);
+  border-radius: 16px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  margin-bottom: 18px;
+  width: 100%;
+}
+.pv-img-wrap img {
+  width: 100%;
+  max-width: 1420px;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.8s ease;
+}
+.pv-panel:hover .pv-img-wrap img { transform: scale(1.02); }
+.pv-caption {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  padding: 0 4px;
+}
+.pv-label {
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--ink);
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+.pv-title { display: none; }
+.pv-desc {
+  font-size: 13px;
+  font-weight: 300;
+  color: var(--ink3);
+  line-height: 1.7;
+}
+.pv-caption-tags { display: none; }
+.pv-divider { display: none; }
+
+.dp-section {
+  background: var(--page-bg);
+  border-top: none;
+  padding: 72px 0 72px 250px;
+}
+.dp-section-header {
+  margin-bottom: 36px;
+  padding-right: 250px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+}
+.dp-section-title {
+  font-size: clamp(26px, 3.5vw, 40px);
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  line-height: 1.2;
+  color: var(--ink);
+}
+.dp-scroll-wrap {
+  display: flex;
+  gap: 12px;
+  overflow-x: auto;
+  padding-right: 250px;
+  padding-bottom: 4px;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+}
+.dp-scroll-wrap::-webkit-scrollbar { display: none; }
+
+.dp-card {
+  flex: 0 0 465px;
+  width: 465px;
+  border-radius: 16px;
+  overflow: hidden;
+  background: var(--surface);
+  display: flex;
+  flex-direction: column;
+  scroll-snap-align: start;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.dp-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 16px 40px rgba(0,0,0,0.10);
+}
+.dp-card-img {
+  width: 100%;
+  aspect-ratio: 465 / 560;
+  overflow: hidden;
+  background: var(--surface2);
+  flex-shrink: 0;
+}
+.dp-card-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.6s ease;
+}
+.dp-card:hover .dp-card-img img { transform: scale(1.04); }
+.dp-card-body {
+  padding: 20px 24px 26px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  flex: 1;
+}
+.dp-card-keyword {
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--ink);
+  letter-spacing: -0.01em;
+}
+.dp-card-desc {
+  font-size: 13px;
+  font-weight: 300;
+  color: var(--ink3);
+  line-height: 1.65;
+}
+
+/* ════════════════════════
+   SPEC SECTION
+   ════════════════════════ */
+.spec-section {
+  background: var(--surface);
+  border-top: none;
+  padding: 80px 250px;
+}
+.spec-inner { max-width: 880px; margin: 0 auto; }
+.spec-label {
+  font-size: 9px;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  color: var(--ink4);
+  text-transform: uppercase;
+  margin-bottom: 48px;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+.spec-label::after { content: ''; flex: 1; height: 1px; background: var(--border); }
+.spec-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 64px; }
+.spec-heading {
+  font-size: 9px;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  color: var(--ink4);
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+.spec-table { width: 100%; border-collapse: collapse; }
+.spec-table tr { border-bottom: 1px solid var(--border); }
+.spec-table tr:first-child { border-top: 1px solid var(--border); }
+.spec-table td { padding: 13px 0; vertical-align: top; }
+.spec-table td:first-child {
+  font-size: 9px;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  color: var(--ink4);
+  text-transform: uppercase;
+  width: 80px;
+}
+.spec-table td:last-child {
+  font-size: 13px;
+  font-weight: 300;
+  color: var(--ink2);
+  line-height: 1.6;
+}
+.custom-list { display: flex; flex-direction: column; }
+.custom-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  padding: 18px 0;
+  border-bottom: 1px solid var(--border);
+}
+.custom-item:first-child { border-top: 1px solid var(--border); }
+.ci-num {
+  width: 22px; height: 22px;
+  background: var(--ink);
+  color: var(--white);
+  font-size: 9px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+.ci-title { font-size: 13px; font-weight: 600; color: var(--ink); margin-bottom: 4px; }
+.ci-desc { font-size: 12px; font-weight: 300; color: var(--ink3); line-height: 1.7; }
+
+/* 크레딧 */
+.credit-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  border-top: 1px solid var(--border);
+  border-left: 1px solid var(--border);
+  margin-top: 64px;
+}
+.credit-item {
+  padding: 20px;
+  border-right: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+}
+.credit-role {
+  font-size: 8px;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  color: var(--primary);
+  text-transform: uppercase;
+  margin-bottom: 7px;
+}
+.credit-name { font-size: 12px; font-weight: 400; color: var(--ink2); line-height: 1.5; }
+.credit-notice {
+  margin-top: 36px;
+  font-size: 10px;
+  font-weight: 300;
+  color: var(--ink4);
+  line-height: 1.9;
+  text-align: center;
+}
+
+/* ════════════════════════
+   CTA SECTION
+   ════════════════════════ */
+.cta-section {
+  border-top: 1px solid var(--border);
+  background: var(--ink);
+  padding: 120px 48px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.cta-eyebrow {
+  font-size: 9px;
+  font-weight: 500;
+  letter-spacing: 0.18em;
+  color: rgba(255,255,255,0.28);
+  text-transform: uppercase;
+  margin-bottom: 28px;
+}
+.cta-title {
+  font-size: clamp(32px, 5vw, 64px);
+  font-weight: 700;
+  letter-spacing: -0.035em;
+  line-height: 1.1;
+  color: var(--white);
+  margin-bottom: 20px;
+}
+.cta-desc {
+  font-size: 15px;
+  font-weight: 300;
+  color: rgba(255,255,255,0.45);
+  line-height: 1.9;
+  max-width: 420px;
+  margin-bottom: 48px;
+}
+.process-row {
+  display: flex;
+  align-items: center;
+  border: 1px solid rgba(255,255,255,0.1);
+  margin-bottom: 48px;
+  width: 100%;
+  max-width: 680px;
+}
+.pr-step {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 16px 12px;
+  gap: 5px;
+  border-right: 1px solid rgba(255,255,255,0.1);
+}
+.pr-step:last-child { border-right: none; }
+.pr-num { font-size: 9px; font-weight: 500; letter-spacing: 0.1em; color: rgba(255,255,255,0.25); }
+.pr-label { font-size: 13px; font-weight: 400; color: rgba(255,255,255,0.65); }
+.cta-btn-wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 14px;
+  width: 100%;
+  max-width: 360px;
+}
+.btn-cta-main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  background: var(--white);
+  color: var(--ink);
+  font-family: var(--sans);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding: 17px 40px;
+  text-decoration: none;
+  width: 100%;
+  border-radius: 5px;
+  transition: opacity 0.15s;
+}
+.btn-cta-main:hover { opacity: 0.88; }
+.cta-note { font-size: 10px; color: rgba(255,255,255,0.28); letter-spacing: 0.04em; }
+.cta-contacts {
+  margin-top: 56px;
+  display: flex;
+  border: 1px solid rgba(255,255,255,0.08);
+}
+.cc-cell {
+  padding: 16px 32px;
+  border-right: 1px solid rgba(255,255,255,0.08);
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+.cc-cell:last-child { border-right: none; }
+.cc-label { font-size: 8px; font-weight: 600; letter-spacing: 0.14em; color: rgba(255,255,255,0.22); text-transform: uppercase; }
+.cc-val { font-size: 12px; font-weight: 300; color: rgba(255,255,255,0.55); }
+
+/* ════════════════════════
+   HOVER EFFECTS
+   ════════════════════════ */
+
+/* Meta strip cells */
+.ms-cell {
+  transition: background 0.2s ease;
+  cursor: default;
+}
+.ms-cell:hover {
+  background: var(--surface);
+}
+.ms-cell:hover .ms-val {
+  color: var(--ink);
+}
+
+/* Trophy spec bar cells */
+.tsb-cell {
+  transition: background 0.2s ease;
+  cursor: default;
+}
+.tsb-cell:hover {
+  background: rgba(255,255,255,0.04);
+}
+.tsb-cell:hover .tsb-keyword {
+  color: var(--white);
+}
+
+/* Spec table rows */
+.spec-table tr {
+  transition: background 0.15s ease;
+}
+.spec-table tr:hover td {
+  background: var(--surface2);
+}
+.spec-table tr:hover td:first-child {
+  color: var(--ink2);
+}
+
+/* Custom items */
+.custom-item {
+  transition: background 0.2s ease, padding-left 0.2s ease;
+  cursor: default;
+}
+.custom-item:hover {
+  background: var(--surface2);
+  padding-left: 12px;
+}
+.custom-item:hover .ci-num {
+  background: var(--primary);
+}
+
+/* Credit items */
+.credit-item {
+  transition: background 0.2s ease;
+  cursor: default;
+}
+.credit-item:hover {
+  background: var(--surface2);
+}
+.credit-item:hover .credit-role {
+  color: var(--primary-d);
+}
+.credit-item:hover .credit-name {
+  color: var(--ink);
+}
+
+/* Process steps in CTA */
+.pr-step {
+  transition: background 0.2s ease;
+  cursor: default;
+}
+.pr-step:hover {
+  background: rgba(255,255,255,0.06);
+}
+.pr-step:hover .pr-label {
+  color: rgba(255,255,255,0.9);
+}
+.pr-step:hover .pr-num {
+  color: rgba(255,255,255,0.55);
+}
+
+/* Contact cells */
+.cc-cell {
+  transition: background 0.2s ease;
+  cursor: default;
+}
+.cc-cell:hover {
+  background: rgba(255,255,255,0.05);
+}
+.cc-cell:hover .cc-val {
+  color: rgba(255,255,255,0.85);
+}
+
+/* Nav logo */
+.site-logo {
+  transition: color 0.15s, letter-spacing 0.2s;
+}
+.site-logo:hover {
+  color: var(--primary);
+  letter-spacing: 0.26em;
+}
+
+/* Hero eyebrow */
+.hero-eyebrow {
+  transition: opacity 0.2s;
+}
+.hero-eyebrow:hover {
+  opacity: 0.7;
+}
+
+/* Product view caption label */
+.pv-label {
+  transition: color 0.15s;
+}
+.pv-panel:hover .pv-label {
+  color: var(--primary);
+}
+
+/* ── FOOTER ── */
+footer {
+  border-top: 1px solid var(--border);
+  background: var(--page-bg);
+  padding: 22px 48px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.footer-copy { font-size: 9px; font-weight: 300; letter-spacing: 0.06em; color: var(--ink4); }
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <a href="#" class="site-logo">TROPHYLAB</a>
+  <nav>
+    <ul class="site-nav">
+      <li><a href="#">Designlab</a></li>
+      <li><a href="#">Products</a></li>
+      <li><a href="#">Portfolio</a></li>
+      <li><a href="#cta" class="nav-cta">문의하기</a></li>
+    </ul>
+  </nav>
+</header>
+
+
+<!-- ════════════
+     HERO — 1번 사진
+     ════════════ -->
+<section class="hero">
+  <img class="hero-bg"
+       src="hero.jpg"
+       alt="VL Investment AUM 1조원 돌파 기념패 — 전체 샷">
+  <div class="hero-overlay"></div>
+  <p class="hero-eyebrow">Full Custom Trophy · 2025 · VL Investment</p>
+  <div class="hero-content">
+    <h1 class="hero-title">VL INVESTMENT</h1>
+    <p class="hero-sub">AUM 1조원 돌파 기념</p>
+    <div class="hero-btns">
+      <a href="#cta" class="btn-fill">커스텀 제작 문의하기</a>
+      <a href="#overview" class="btn-ghost">프로젝트 보기 ↓</a>
+    </div>
+  </div>
+  <div class="hero-scroll">
+    <div class="hero-scroll-line"></div>
+    <span class="hero-scroll-label">Scroll</span>
+  </div>
+</section>
+
+
+<!-- ════════════
+     INTRO
+     ════════════ -->
+<section class="intro-strip" id="overview">
+  <h2 class="intro-headline">기업의 성과를<br>하나의 오브제로</h2>
+  <p class="intro-body">VL인베스트먼트의 누적 AUM 1조원 달성을 기념하기 위해 제작된 기념패입니다.<br>로고는 각인이 아닌 3차원 구조체로 치환되어, 스테인리스 스틸 소재를 통해 직관적으로 세련된 룩앤필로 완성되었습니다.<br>또한, 사명인 VL에 'Vision to Leadership'의 의미를 더해 어워드 아이덴티티를 정립합니다.</p>
+</section>
+
+
+<!-- META -->
+<div class="meta-strip">
+  <div class="ms-cell"><p class="ms-key">Client</p><p class="ms-val">VL Investment</p></div>
+  <div class="ms-cell"><p class="ms-key">Material</p><p class="ms-val">Stainless + Brass</p></div>
+  <div class="ms-cell"><p class="ms-key">Size</p><p class="ms-val">W340 H245 D40 mm</p></div>
+  <div class="ms-cell"><p class="ms-key">Delivered</p><p class="ms-val">July 2025</p></div>
+</div>
+
+
+<!-- ════════════
+     PRODUCT VIEW — 정면 + 후면
+     ════════════ -->
+<section class="product-view">
+  <h2 class="product-view-title">Product View</h2>
+
+  <div class="pv-panel">
+    <div class="pv-img-wrap">
+      <img src="product_front.png" alt="VL Investment 기념패 — Front">
+    </div>
+    <div class="pv-caption">
+      <p class="pv-label">Front</p>
+      <p class="pv-desc">VL 레터폼 입체 구조와 기업 로고, AUM 수치 및 설립연도 레이저 각인이 새겨진 정면입니다. 헤어라인 마감과 미러 면의 대비가 존재감을 강조합니다.</p>
+    </div>
+  </div>
+
+  <div class="pv-panel">
+    <div class="pv-img-wrap">
+      <img src="product_rear.png" alt="VL Investment 기념패 — Rear">
+    </div>
+    <div class="pv-caption">
+      <p class="pv-label">Back</p>
+      <p class="pv-desc">VL인베스트먼트가 운용해온 펀드 포트폴리오 전체 명칭이 각인된 후면입니다. 기념패 이상의 의미—10년간의 투자 히스토리를 오브제 안에 기록합니다.</p>
+    </div>
+  </div>
+
+</section>
+
+
+<!-- ════════════
+     DESIGN POINTS
+     ════════════ -->
+<section class="dp-section">
+  <div class="dp-section-header">
+    <h2 class="dp-section-title">디자인의 핵심.<br>세 가지 포인트.</h2>
+  </div>
+
+  <div class="dp-scroll-wrap">
+
+    <div class="dp-card">
+      <div class="dp-card-img">
+        <img src="card1.jpg" alt="VL 레터폼 구조">
+      </div>
+      <div class="dp-card-body">
+        <p class="dp-card-keyword">BI를 구조로.</p>
+        <p class="dp-card-desc">로고 각인 대신 사명 'VL' 레터폼 자체를 입체 구조로 설계 — 기업의 정체성이 곧 트로피의 형태가 됩니다.</p>
+      </div>
+    </div>
+
+    <div class="dp-card">
+      <div class="dp-card-img">
+        <img src="card2.png" alt="Refined Silver Tone 클로즈업">
+      </div>
+      <div class="dp-card-body">
+        <p class="dp-card-keyword">Stainless & Silver Plating Accent.</p>
+        <p class="dp-card-desc">스테인리스 스틸 바디에 황동 실버 도금 — 빛의 각도에 따라 달라지는 광택 차이가 입체감을 만듭니다.</p>
+      </div>
+    </div>
+
+    <div class="dp-card">
+      <div class="dp-card-img">
+        <img src="card3.png" alt="오브제로서의 무게" style="object-position: 60% 30%; transform: scale(1.3);">
+      </div>
+      <div class="dp-card-body">
+        <p class="dp-card-keyword">오브제로서의 무게.</p>
+        <p class="dp-card-desc">D40mm의 충분한 두께와 안정적인 비례 — 손에 들기보다 공간에 놓이도록 설계된 존재감입니다.</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- ════════════
+     SPEC
+     ════════════ -->
+<section class="spec-section">
+  <div class="spec-inner">
+    <p class="spec-label">Specification & Credit</p>
+    <div class="spec-grid" style="grid-template-columns: 1fr 1fr; gap: 64px;">
+      <div>
+        <p class="spec-heading">제작 사양</p>
+        <table class="spec-table">
+          <tr><td>Size</td><td>W340 H245 D40 (mm)</td></tr>
+          <tr><td>Material</td><td>Stainless Steel + Brass Silver Plating</td></tr>
+          <tr><td>Finish</td><td>헤어라인 + 미러 혼합 마감</td></tr>
+          <tr><td>Engraving</td><td>레이저 각인 (정면·후면)</td></tr>
+          <tr><td>Delivered</td><td>July 2025</td></tr>
+          <tr><td>Registered</td><td>January 2026</td></tr>
+        </table>
+      </div>
+      <div>
+        <p class="spec-heading">커스터마이징 요소</p>
+        <div class="custom-list">
+          <div class="custom-item">
+            <div class="ci-num">01</div>
+            <div>
+              <p class="ci-title">형태 / 구조</p>
+              <p class="ci-desc">기성 트로피 형태 없이 VL 레터폼을 3D 구조체로 처음부터 설계</p>
+            </div>
+          </div>
+          <div class="custom-item">
+            <div class="ci-num">02</div>
+            <div>
+              <p class="ci-title">문구 / 각인</p>
+              <p class="ci-desc">정면 — AUM 수치·설립연도·기념 문구 / 후면 — 펀드 포트폴리오 전체 명칭</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="credit-grid">
+      <div class="credit-item">
+        <p class="credit-role">Design Director</p>
+        <p class="credit-name">Jaepil Lee</p>
+      </div>
+      <div class="credit-item">
+        <p class="credit-role">Trophy Design</p>
+        <p class="credit-name">Jiyeon Choi</p>
+      </div>
+      <div class="credit-item">
+        <p class="credit-role">Design Strategy</p>
+        <p class="credit-name">Trophy Design Lab,<br>Trophylab Production</p>
+      </div>
+      <div class="credit-item">
+        <p class="credit-role">Photography</p>
+        <p class="credit-name">Haesol Lim</p>
+      </div>
+    </div>
+
+    <p class="credit-notice">
+      트로피랩의 모든 디자인은 디자인 등록되어 법적 보호를 받고 있습니다.<br>
+      무단으로 복제, 도용, 배포할 경우 법적 책임 및 판매 제재가 있을 수 있습니다.<br>
+      COPYRIGHT ⓒ 2026 TROPHYLAB. ALL RIGHTS RESERVED
+    </p>
+  </div>
+</section>
+
+
+<!-- ════════════
+     CTA
+     ════════════ -->
+<section class="cta-section" id="cta">
+  <p class="cta-eyebrow">Full Custom · Bespoke Order</p>
+  <h2 class="cta-title">이런 트로피,<br>우리도 만들 수 있습니다.</h2>
+  <p class="cta-desc">로고, 소재, 형태, 문구 — 어느 것 하나 기성품 없이<br>처음부터 함께 설계합니다.</p>
+  <div class="process-row">
+    <div class="pr-step"><span class="pr-num">01</span><span class="pr-label">상담</span></div>
+    <div class="pr-step"><span class="pr-num">02</span><span class="pr-label">시안</span></div>
+    <div class="pr-step"><span class="pr-num">03</span><span class="pr-label">제작</span></div>
+    <div class="pr-step"><span class="pr-num">04</span><span class="pr-label">납품</span></div>
+  </div>
+  <div class="cta-btn-wrap">
+    <a href="mailto:trophylab@trophylab.com" class="btn-cta-main">커스텀 제작 문의하기 →</a>
+    <p class="cta-note">예산·수량·일정이 미정이어도 상담 가능합니다</p>
+  </div>
+  <div class="cta-contacts">
+    <div class="cc-cell"><p class="cc-label">Tel</p><p class="cc-val">070-4699-4680</p></div>
+    <div class="cc-cell"><p class="cc-label">Email</p><p class="cc-val">trophylab@trophylab.com</p></div>
+    <div class="cc-cell"><p class="cc-label">Hours</p><p class="cc-val">월–금 09:00–18:00</p></div>
+  </div>
+</section>
+
+<footer>
+  <span class="footer-copy">COPYRIGHT © 2026 TROPHYLAB. ALL RIGHTS RESERVED.</span>
+  <span class="footer-copy">서울 성동구 성수일로4길 25</span>
+</footer>
+
+</body>
+</html>
