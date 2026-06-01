@@ -65,9 +65,7 @@ img { display: block; max-width: 100%; }
   letter-spacing: 0.04em;
   color: var(--ink3);
   text-decoration: none;
-  transition: color 0.15s;
 }
-.site-nav a:hover { color: var(--ink); }
 .nav-cta {
   background: var(--ink) !important;
   color: var(--white) !important;
@@ -381,9 +379,7 @@ img { display: block; max-width: 100%; }
   max-width: 1420px;
   object-fit: cover;
   display: block;
-  transition: transform 0.8s ease;
 }
-.pv-panel:hover .pv-img-wrap img { transform: scale(1.02); }
 .pv-caption {
   display: flex;
   align-items: flex-start;
@@ -447,11 +443,6 @@ img { display: block; max-width: 100%; }
   display: flex;
   flex-direction: column;
   scroll-snap-align: start;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-.dp-card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 16px 40px rgba(0,0,0,0.10);
 }
 .dp-card-img {
   width: 100%;
@@ -465,9 +456,7 @@ img { display: block; max-width: 100%; }
   height: 100%;
   object-fit: cover;
   display: block;
-  transition: transform 0.6s ease;
 }
-.dp-card:hover .dp-card-img img { transform: scale(1.04); }
 .dp-card-body {
   padding: 20px 24px 26px;
   display: flex;
@@ -691,124 +680,6 @@ img { display: block; max-width: 100%; }
 .cc-label { font-size: 8px; font-weight: 600; letter-spacing: 0.14em; color: rgba(255,255,255,0.22); text-transform: uppercase; }
 .cc-val { font-size: 12px; font-weight: 300; color: rgba(255,255,255,0.55); }
 
-/* ════════════════════════
-   HOVER EFFECTS
-   ════════════════════════ */
-
-/* Meta strip cells */
-.ms-cell {
-  transition: background 0.2s ease;
-  cursor: default;
-}
-.ms-cell:hover {
-  background: var(--surface);
-}
-.ms-cell:hover .ms-val {
-  color: var(--ink);
-}
-
-/* Trophy spec bar cells */
-.tsb-cell {
-  transition: background 0.2s ease;
-  cursor: default;
-}
-.tsb-cell:hover {
-  background: rgba(255,255,255,0.04);
-}
-.tsb-cell:hover .tsb-keyword {
-  color: var(--white);
-}
-
-/* Spec table rows */
-.spec-table tr {
-  transition: background 0.15s ease;
-}
-.spec-table tr:hover td {
-  background: var(--surface2);
-}
-.spec-table tr:hover td:first-child {
-  color: var(--ink2);
-}
-
-/* Custom items */
-.custom-item {
-  transition: background 0.2s ease, padding-left 0.2s ease;
-  cursor: default;
-}
-.custom-item:hover {
-  background: var(--surface2);
-  padding-left: 12px;
-}
-.custom-item:hover .ci-num {
-  background: var(--primary);
-}
-
-/* Credit items */
-.credit-item {
-  transition: background 0.2s ease;
-  cursor: default;
-}
-.credit-item:hover {
-  background: var(--surface2);
-}
-.credit-item:hover .credit-role {
-  color: var(--primary-d);
-}
-.credit-item:hover .credit-name {
-  color: var(--ink);
-}
-
-/* Process steps in CTA */
-.pr-step {
-  transition: background 0.2s ease;
-  cursor: default;
-}
-.pr-step:hover {
-  background: rgba(255,255,255,0.06);
-}
-.pr-step:hover .pr-label {
-  color: rgba(255,255,255,0.9);
-}
-.pr-step:hover .pr-num {
-  color: rgba(255,255,255,0.55);
-}
-
-/* Contact cells */
-.cc-cell {
-  transition: background 0.2s ease;
-  cursor: default;
-}
-.cc-cell:hover {
-  background: rgba(255,255,255,0.05);
-}
-.cc-cell:hover .cc-val {
-  color: rgba(255,255,255,0.85);
-}
-
-/* Nav logo */
-.site-logo {
-  transition: color 0.15s, letter-spacing 0.2s;
-}
-.site-logo:hover {
-  color: var(--primary);
-  letter-spacing: 0.26em;
-}
-
-/* Hero eyebrow */
-.hero-eyebrow {
-  transition: opacity 0.2s;
-}
-.hero-eyebrow:hover {
-  opacity: 0.7;
-}
-
-/* Product view caption label */
-.pv-label {
-  transition: color 0.15s;
-}
-.pv-panel:hover .pv-label {
-  color: var(--primary);
-}
 
 /* ── FOOTER ── */
 footer {
